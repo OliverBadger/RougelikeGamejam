@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f55b9d7a382cfdc4484fbff0234d5144
+guid: ee9d02c4775c9ee46be4bc9835137abb
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638685998171282820
+  platformSettingsDirtyTick: 638686040369391860
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -124,7 +124,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Frame_0
     originalName: 
-    pivot: {x: 0.4915254, y: 0.4915254}
+    pivot: {x: 0.37254903, y: 0.46268657}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -132,9 +132,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 59
-      height: 59
-    spriteID: 97e0d3ad75a81134195e61697fa4443f
+      width: 51
+      height: 67
+    spriteID: 1ad6261c5f9d95843afb6f98a0f52a55
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -145,17 +145,17 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: Frame_1
     originalName: 
-    pivot: {x: 0.4915254, y: 0.4915254}
+    pivot: {x: 0.37254903, y: 0.46268657}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
       x: 4
-      y: 71
-      width: 59
-      height: 59
-    spriteID: 737549e6fb56c004da8107b8e0cfe1fb
+      y: 79
+      width: 51
+      height: 67
+    spriteID: 376b72bf26fd284409c93a8da4ee4997
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -163,12 +163,54 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 71}
+    uvTransform: {x: 4, y: 79}
+  - name: Frame_2
+    originalName: 
+    pivot: {x: 0.4318182, y: 0.50793654}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 63
+      y: 4
+      width: 44
+      height: 63
+    spriteID: 75004fd9e656e78468f7aae7ef984b32
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 63, y: 4}
+  - name: Frame_3
+    originalName: 
+    pivot: {x: 0.37254903, y: 0.45454547}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 154
+      width: 51
+      height: 66
+    spriteID: ae655f3b514403e4891e72de9693065a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 154}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 828642517
-    name: Earthling_Die
+    guid: -1224348606
+    name: Sparky_Damaged
     layerFlags: 0
     layerType: 0
     blendMode: 0
@@ -177,20 +219,38 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 35
-        y: 35
-        width: 59
-        height: 59
-      spriteId: 97e0d3ad75a81134195e61697fa4443f
+        x: 45
+        y: 33
+        width: 51
+        height: 67
+      spriteId: 1ad6261c5f9d95843afb6f98a0f52a55
     - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 35
-        y: 35
-        width: 59
-        height: 59
-      spriteId: 737549e6fb56c004da8107b8e0cfe1fb
+        x: 45
+        y: 33
+        width: 51
+        height: 67
+      spriteId: 376b72bf26fd284409c93a8da4ee4997
+    - name: Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 45
+        y: 32
+        width: 44
+        height: 63
+      spriteId: 75004fd9e656e78468f7aae7ef984b32
+    - name: Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 45
+        y: 34
+        width: 51
+        height: 66
+      spriteId: ae655f3b514403e4891e72de9693065a
     linkedCells: []
     parentIndex: -1
   platformSettings:

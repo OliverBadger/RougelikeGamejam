@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f55b9d7a382cfdc4484fbff0234d5144
+guid: 663308fb86872514eb88b5ea2e77fe15
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638685998171282820
+  platformSettingsDirtyTick: 638685999261721716
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -122,9 +122,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Frame_0
+  - name: Flying_Rock_Cone
     originalName: 
-    pivot: {x: 0.4915254, y: 0.4915254}
+    pivot: {x: 0.5217391, y: 0.54545456}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -132,9 +132,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 59
-      height: 59
-    spriteID: 97e0d3ad75a81134195e61697fa4443f
+      width: 46
+      height: 44
+    spriteID: b9e7270a1dcc932498e45af69e89a1b3
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -143,54 +143,24 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: Frame_1
-    originalName: 
-    pivot: {x: 0.4915254, y: 0.4915254}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 71
-      width: 59
-      height: 59
-    spriteID: 737549e6fb56c004da8107b8e0cfe1fb
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 71}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 828642517
-    name: Earthling_Die
+    guid: -1988114627
+    name: Flying_Rock_Cone
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Frame_0
+    - name: Flying_Rock
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 35
-        y: 35
-        width: 59
-        height: 59
-      spriteId: 97e0d3ad75a81134195e61697fa4443f
-    - name: Frame_1
-      frameIndex: 1
-      additiveSortOrder: 0
-      cellRect:
-        x: 35
-        y: 35
-        width: 59
-        height: 59
-      spriteId: 737549e6fb56c004da8107b8e0cfe1fb
+        x: 8
+        y: 8
+        width: 46
+        height: 44
+      spriteId: b9e7270a1dcc932498e45af69e89a1b3
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -233,4 +203,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 128, y: 128}
+  canvasSize: {x: 64, y: 64}

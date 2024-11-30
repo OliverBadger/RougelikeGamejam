@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 1160356261127867848, guid: 9d6449b013e9c4f4f8a3ff5e8cbe91ba, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 1cb471b165c77d7429766049efba419a, type: 2}
     - target: {fileID: 7878350319992209165, guid: 9d6449b013e9c4f4f8a3ff5e8cbe91ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -109,17 +113,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.019999996, y: 0.7099999}
+  m_Offset: {x: -0.019999996, y: 0.019218042}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.54761904, y: -0.45945948}
+    pivot: {x: 0.54761904, y: 0.4054054}
     oldSize: {x: 0.42, y: 0.74}
     newSize: {x: 0.42, y: 0.74}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.42, y: 0.73999995}
+  m_Size: {x: 0.42, y: 0.6384678}
   m_EdgeRadius: 0
 --- !u!114 &7933321288274353529
 MonoBehaviour:
@@ -146,4 +150,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 895d7ceb97476b344b37e2f75b000e4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 30
