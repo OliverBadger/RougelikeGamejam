@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class LootboxHandler : MonoBehaviour
 {
-  [Header("Prefabs to Spawn")]
+    [Header("Prefabs to Spawn")]
     public GameObject[] lootPrefabs; // Array of prefabs to spawn (e.g., coins, weapons, items)
     public Transform spawnPoint; // Location where the loot will spawn
     public Sprite openedBox;
@@ -12,9 +12,11 @@ public class LootboxHandler : MonoBehaviour
     private bool isPlayerNearby = false; // Tracks if the player is near the chest
     private bool isChestOpened = false; // Tracks if the chest has already been opened
     private SpriteRenderer spriteRenderer;
+    private AudioSource AS;
 
     private void Start() 
     {
+        AS = GetComponent<AudioSource>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
@@ -24,6 +26,7 @@ public class LootboxHandler : MonoBehaviour
         if (isPlayerNearby && !isChestOpened && Input.GetKeyDown(interactionKey))
         {
             OpenChest();
+            AS.Play();
         }
         if (Input.GetKeyDown(interactionKey))
         {
