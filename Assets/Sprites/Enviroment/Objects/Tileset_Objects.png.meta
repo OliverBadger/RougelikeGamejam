@@ -695,13 +695,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SignLR
+      name: TOPSignLR
       rect:
         serializedVersion: 2
         x: 261
-        y: 63
+        y: 77
         width: 22
-        height: 31
+        height: 17
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -717,13 +717,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SignUD
+      name: SignBottom
       rect:
         serializedVersion: 2
         x: 293
         y: 63
-        width: 22
-        height: 31
+        width: 21
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1398,6 +1398,50 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: UP_Sign
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 77
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0f6049460b70f44a83e9ad16d779d55
+      internalID: 1648235694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOTTOMSignLR
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 64
+        width: 22
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf82a19e261e32f46820e0bdbad7aa43
+      internalID: 345603003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -1412,6 +1456,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      BOTTOMSignLR: 345603003
       Barrel_01: 359208924
       Barrel_03: -1192396631
       Barrel_04: 544373119
@@ -1440,9 +1485,8 @@ TextureImporter:
       PC_2: -2900464200494498643
       Pylon: 5824971224350734245
       Safe: 5172769026710147914
-      SignLR: -4231218135192988694
-      SignUD: 6401703600666006637
-      Tileset_Objects_0: -277486644
+      SignBottom: 6401703600666006637
+      TOPSignLR: -4231218135192988694
       Tileset_Objects_1: -5670883846186386518
       Tileset_Objects_11: -3674510010387346909
       Tileset_Objects_17: -2078829490815464145
@@ -1467,6 +1511,7 @@ TextureImporter:
       Tileset_Objects_52: -7105844
       Tileset_Objects_53: -1322672952
       Tileset_Objects_54: -48754736
+      UP_Sign: -277486644
       Watertower: 734437939237996848
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
