@@ -1,16 +1,24 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class ShopManager : MonoBehaviour
 {
     public int playerCurrency = 100;
     public List<Item> itemsForSale = new List<Item>();
+    public Button potionButton;
+    public Button weaponButton;
+    public Button defensiveItemButton;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         itemsForSale.Add(new Item("Potion", 10));
         itemsForSale.Add(new Item("Weapon", 50));
         itemsForSale.Add(new Item("Defensive Item", 30));
+
+        potionButton.onClick.AddListener(() => PurchaseItem(itemsForSale[0]));
+        weaponButton.onClick.AddListener(() => PurchaseItem(itemsForSale[1]));
+        defensiveItemButton.onClick.AddListener(() => PurchaseItem(itemsForSale[2]));
     }
 
     // Update is called once per frame
@@ -21,6 +29,7 @@ public class ShopManager : MonoBehaviour
 
     public void PurchaseItem(Item item)
     {
+        Debug.Log($"Running func");
         if (playerCurrency >= item.price)
         {
             playerCurrency -= item.price;
