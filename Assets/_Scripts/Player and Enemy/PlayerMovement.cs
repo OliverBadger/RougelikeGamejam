@@ -4,12 +4,13 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement Settings")]
     public float moveSpeed = 5f; // Base movement speed
-    public float dashSpeed = 15f; // Speed during a dash
-    public float dashDuration = 0.2f; // Duration of the dash
-    public float dashCooldown = 1f; // Time between dashes
     public Rigidbody2D rb;
-
     private Vector2 movementInput; // Input for movement (WASD or Arrow Keys)
+    [Header("Dash Settings")]
+    public float dashSpeed = 15f; // Speed during a dash
+    public float dashCooldown = 1f; // Time between dashes
+    public float dashDuration = 0.2f; // Duration of the dash
+
     private bool isDashing = false;
     private float dashTime; // Tracks dash duration
     private float dashCooldownTimer = 0f; // Tracks dash cooldown
