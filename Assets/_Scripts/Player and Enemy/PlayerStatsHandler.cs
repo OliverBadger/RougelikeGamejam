@@ -28,7 +28,23 @@ public class PlayerStatsHandler : MonoBehaviour
     [Header("Player Stats")]
     public int maxHealth;
     public int currentHealth;
-    public int totalCoins;
+    private int _totalCoins;
+    public int totalCoins
+    {
+        get => _totalCoins;
+        set 
+        {
+            if (value < 0)
+            {
+                _totalCoins = 0;
+            }
+            else
+            {
+                _totalCoins = value;
+            }
+        }
+    }
+    
     public bool isDead;
 
     [Header("UI Settings")]
