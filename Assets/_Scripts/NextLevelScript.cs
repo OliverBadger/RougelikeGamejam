@@ -5,6 +5,7 @@ public class NextLevelScript : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other) 
     {
-        SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(1));    
+        if(other.CompareTag("Player"))
+            SceneManager.LoadScene(1);
     }
 }
