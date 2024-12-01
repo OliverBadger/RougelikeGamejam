@@ -9,8 +9,8 @@ public class PlayerMovementComp : MonoBehaviour
     public float moveSpeed = 3f;
     public InputAction moveAction;
     public InputAction attackAction;
-    public Animator animator;
-    public Rigidbody2D rb;
+    private Animator animator;
+    private Rigidbody2D rb;
     public bool isMoving;
 
 
@@ -24,7 +24,7 @@ public class PlayerMovementComp : MonoBehaviour
     private float dashCooldownTimer = 0f; // Tracks dash cooldown
     private Vector2 moveValue;
 
-    public AudioSource audioSource;
+    private AudioSource audioSource;
     public AudioClip moveSound;
     public AudioClip dashSound;
 
