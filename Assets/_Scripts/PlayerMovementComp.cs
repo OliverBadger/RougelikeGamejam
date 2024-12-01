@@ -10,6 +10,7 @@ public class PlayerMovementComp : MonoBehaviour
     public InputAction attackAction;
     public Animator animator;
     public Rigidbody2D rb;
+    public bool isMoving;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,11 +23,11 @@ public class PlayerMovementComp : MonoBehaviour
     void Update()
     {
         Vector2 moveInput = moveAction.ReadValue<Vector2>();
-        var moveValue = new Vector2(moveInput.x, moveInput.y);
+        var moveValue = new Vector2(moveInput.x, moveInput.y).normalized;
         // Add the movement animation here
         if (moveValue != Vector2.zero)
         {
-            animator.SetBool("IsRunning", true);
+            if (!animator.GetBool("IsAttacking")) { animator.SetBool("IsRunning", true); }
             rb.MovePosition(rb.position + moveSpeed * Time.deltaTime * moveValue);
         }
         else

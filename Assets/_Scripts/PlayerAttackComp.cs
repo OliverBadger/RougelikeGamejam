@@ -55,7 +55,7 @@ public class PlayerAttackComp : MonoBehaviour
     public void OnAttack()
     {
         // If the player is in the process of attacking already, do nothing
-        if (attackTimeCounter > 0) return;
+        if (attackTimeCounter > 0 || isAttacking) return;
         // Start logging attack time
         attackTimeCounter = attackTime;
     }
@@ -64,7 +64,7 @@ public class PlayerAttackComp : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            if (isAttacking)
+            if (attackTimeCounter > 0)
             {
 
                 // Move the fist over a span of time of 1.2 seconds
