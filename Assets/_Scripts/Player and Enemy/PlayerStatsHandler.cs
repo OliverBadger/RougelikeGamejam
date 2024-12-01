@@ -44,11 +44,24 @@ public class PlayerStatsHandler : MonoBehaviour
             }
         }
     }
+    
+    public bool isDead;
 
     [Header("UI Settings")]
     public Canvas canvas;
     public Slider slider;
     public TextMeshProUGUI coinDisplay;
+
+
+    public void Die()
+    {
+        isDead = true;
+    }
+
+    public void Live()
+    {
+        isDead = false;
+    }
 
     private void Awake(){
         if (Instance == null) { 

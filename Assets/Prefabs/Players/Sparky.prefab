@@ -178,6 +178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chaseDistance: 8
+  startChaseCooldown: 2
   chaseTime: 0.5
   range: 15
 --- !u!50 &7624317537334855721

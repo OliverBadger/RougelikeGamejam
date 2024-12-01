@@ -9,25 +9,29 @@ public class EnemyChaseComp : MonoBehaviour
     private GameObject player;
     public float chaseDistance = 2f;
     private float startChaseCounter;
-    public readonly float startChaseCooldown = 2f;
+    public float startChaseCooldown;
     private bool isChasing;
     private Vector3 chaseStartPos;
-    private Vector3 chaseEndPos; 
+    private Vector3 chaseEndPos;
     // Update is called once per frame
     private float chaseTimeCounter;
     public float chaseTime = 1f;
     public float range = 2f;
-
+    // Only for electric balls !!!
+    public float expireTime;
+    public float expireTimeCounter;
+    public bool IsProjectile;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         startChaseCounter = startChaseCooldown;
         isChasing = false;
-        chaseTimeCounter = 2f;
+        expireTimeCounter = expireTime;
+
     }
     void Update()
     {
-        if(Vector2.Distance(player.transform.position, transform.position) <= range)
+        if (Vector2.Distance(player.transform.position, transform.position) <= range)
         {
             // After every 2 seconds, move towards the player by some set distance'
             if (startChaseCounter <= 0)
@@ -56,6 +60,18 @@ public class EnemyChaseComp : MonoBehaviour
                     isChasing = false;
                 }
             }
+            if (IsProjectile)
+            {
+                if (expireTime <= 0)
+                {
+                    Destroy(gameObject);
+                }
+                else
+                {
+                    expireTime -= Time.deltaTime;
+                }
+            }
+
         }
     }
 }
