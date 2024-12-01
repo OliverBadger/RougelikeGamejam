@@ -3,8 +3,8 @@ using UnityEngine.UI;
 
 public class PlayerHealthComp : MonoBehaviour
 {
-    public Canvas activeCanvas;
-    public Canvas deathCanvas;
+    public GameObject activeCanvas;
+    public GameObject deathCanvas;
     public float maxHealth = 100;
     private float currentHealth;
     private bool isDead;
@@ -43,8 +43,9 @@ public class PlayerHealthComp : MonoBehaviour
         Debug.Log("Player died!");
         // Add additional logic for player death here
 
-        activeCanvas.enabled = false;
-        deathCanvas.enabled = true;
+        activeCanvas.active = false;
+        deathCanvas.active = true;
+        gameObject.active = false;
     }
 
     public float GetCurrentHealth()
