@@ -178,7 +178,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chaseDistance: 8
-  chaseTime: 0.1
+  chaseTime: 0.5
+  range: 15
 --- !u!50 &7624317537334855721
 Rigidbody2D:
   serializedVersion: 5
