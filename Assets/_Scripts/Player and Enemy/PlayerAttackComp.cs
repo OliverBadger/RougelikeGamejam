@@ -14,6 +14,9 @@ public class PlayerAttackComp : MonoBehaviour
     private float attackTime;
     private float attackTimeCounter;
     [SerializeField] private float armLength;
+    public AudioSource audioSource;
+    public AudioClip attackSound;
+    public AudioClip attackHitSound;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -23,6 +26,7 @@ public class PlayerAttackComp : MonoBehaviour
         armLength = 0.9f;
         attackStartPos = fist.localPosition;
         attackEndPos = new Vector3(armLength + fist.localPosition.x, fist.localPosition.y, fist.localPosition.z);
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -58,6 +62,7 @@ public class PlayerAttackComp : MonoBehaviour
         if (attackTimeCounter > 0 || isAttacking) return;
         // Start logging attack time
         attackTimeCounter = attackTime;
+        audioSource.PlayOneShot(attackSound);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -66,6 +71,7 @@ public class PlayerAttackComp : MonoBehaviour
         {
             if (attackTimeCounter > 0)
             {
+                audioSource.PlayOneShot(attackHitSound);
 
                 // Move the fist over a span of time of 1.2 seconds
                 other.gameObject.GetComponent<EnemyHealthComp>().TakeDamage(damage);
