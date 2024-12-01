@@ -9,6 +9,7 @@ public class ShopManager : MonoBehaviour
     public Button potionButton;
     public Button weaponButton;
     public Button defensiveItemButton;
+    private PlayerStatsHandler playerStatsHandler;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -29,7 +30,7 @@ public class ShopManager : MonoBehaviour
 
     public void PurchaseItem(Item item)
     {
-        Debug.Log($"Running func");
+        Debug.Log(playerStatsHandler.totalCoins);
         if (playerCurrency >= item.price)
         {
             playerCurrency -= item.price;
