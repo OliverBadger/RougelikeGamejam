@@ -9,8 +9,8 @@ public class PlayerMovementComp : MonoBehaviour
     public float moveSpeed = 3f;
     public InputAction moveAction;
     public InputAction attackAction;
-    public Animator animator;
-    public Rigidbody2D rb;
+    private Animator animator;
+    private Rigidbody2D rb;
     public bool isMoving;
 
 
@@ -24,10 +24,10 @@ public class PlayerMovementComp : MonoBehaviour
     private float dashCooldownTimer = 0f; // Tracks dash cooldown
     private Vector2 moveValue;
 
-    public AudioSource audioSource;
+    private AudioSource audioSource;
     public AudioClip moveSound;
     public AudioClip dashSound;
-
+    public PlayerStaminaComp playerStaminaComp;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -37,6 +37,7 @@ public class PlayerMovementComp : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
+        playerStaminaComp = GetComponent<PlayerStaminaComp>();
     }
 
     // Update game logic here, dont forget to multiply by Time.deltaTime to make it frame rate independent
@@ -83,13 +84,16 @@ public class PlayerMovementComp : MonoBehaviour
     {
         // Apply normal movement based on input
         rb.linearVelocity = moveValue * moveSpeed;
-        if (!audioSource.isPlaying) audioSource.PlayOneShot(moveSound);
+        if (rb.linearVelocity != Vector2.zero && !audioSource.isPlaying) audioSource.PlayOneShot(moveSound);
     }
     private void StartDash()
     {
+
+        if (!playerStaminaComp.UseStamina(20)) return;
         isDashing = true;
         dashTime = dashDuration;
         dashCooldownTimer = dashCooldown;
+
         audioSource.PlayOneShot(dashSound);
 
     }

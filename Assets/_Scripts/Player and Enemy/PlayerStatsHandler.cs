@@ -56,7 +56,7 @@ public class PlayerStatsHandler : MonoBehaviour
     public void AddCoin()
     {
         totalCoins++;
-        coinDisplay.text = totalCoins.ToString(); 
+        coinDisplay.text = totalCoins.ToString();
     }
 
     public void PlayerTakesDamage(int damage)
