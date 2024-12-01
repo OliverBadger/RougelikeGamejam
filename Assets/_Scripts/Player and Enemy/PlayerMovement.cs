@@ -41,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
         {
             dashCooldownTimer -= Time.deltaTime;
         }
+
     }
 
     void FixedUpdate()

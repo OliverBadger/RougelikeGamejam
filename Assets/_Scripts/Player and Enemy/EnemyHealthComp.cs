@@ -1,22 +1,34 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyHealthComp : MonoBehaviour
 {
-    public int maxHealth = 100;
-    private int currentHealth;
+    public float maxHealth;
+    private float currentHealth;
     private Animator animator;
+    public bool isBoss;
+    public Slider bossHealthBar;
 
     void Start()
     {
         currentHealth = maxHealth;
         animator = GetComponent<Animator>();
+        if (isBoss)
+        {
+            bossHealthBar.value = currentHealth / maxHealth;
+
+        }
     }
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        if (isBoss)
+        {
+            bossHealthBar.value = currentHealth / maxHealth;
+        }
         animator.SetTrigger("IsDamaged");
         if (currentHealth <= 0)
         {
@@ -24,12 +36,9 @@ public class EnemyHealthComp : MonoBehaviour
         }
     }
 
-    internal void TakeDamage(object damage)
-    {
-        throw new NotImplementedException();
-    }
 
-    public int GetCurrentHealth()
+
+    public float GetCurrentHealth()
     {
         return currentHealth;
     }
