@@ -47,10 +47,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  dashSpeed: 15
-  dashDuration: 0.2
-  dashCooldown: 1
   rb: {fileID: 7346949573062555286}
+  dashSpeed: 15
+  dashCooldown: 1
+  dashDuration: 0.2
 --- !u!143 &9069898902374877216
 CharacterController:
   m_ObjectHideFlags: 0
@@ -229,7 +229,7 @@ BoxCollider2D:
   m_Offset: {x: -0.006093025, y: -0.013541222}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.4915254, y: 0.5}
     oldSize: {x: 0.59, y: 0.58}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5

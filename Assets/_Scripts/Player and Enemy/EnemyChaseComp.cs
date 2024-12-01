@@ -2,7 +2,7 @@ using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class EnemyChaseCOmp : MonoBehaviour
+public class EnemyChaseComp : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
