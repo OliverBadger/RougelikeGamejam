@@ -915,7 +915,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset_Objects_33
+      name: Grate1
       rect:
         serializedVersion: 2
         x: 387
@@ -937,7 +937,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset_Objects_34
+      name: Grate4
       rect:
         serializedVersion: 2
         x: 419
@@ -959,7 +959,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset_Objects_35
+      name: Window 2
       rect:
         serializedVersion: 2
         x: 448
@@ -981,7 +981,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset_Objects_36
+      name: Window3
       rect:
         serializedVersion: 2
         x: 484
@@ -1003,7 +1003,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset_Objects_37
+      name: Grate2
       rect:
         serializedVersion: 2
         x: 387
@@ -1025,7 +1025,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset_Objects_38
+      name: Grate3
       rect:
         serializedVersion: 2
         x: 419
@@ -1047,7 +1047,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset_Objects_39
+      name: Window 1
       rect:
         serializedVersion: 2
         x: 448
@@ -1069,7 +1069,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset_Objects_40
+      name: Window4
       rect:
         serializedVersion: 2
         x: 484
@@ -1333,7 +1333,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset_Objects_52
+      name: Window5
       rect:
         serializedVersion: 2
         x: 450
@@ -1355,7 +1355,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset_Objects_53
+      name: WoodWindow2
       rect:
         serializedVersion: 2
         x: 482
@@ -1377,7 +1377,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset_Objects_54
+      name: WoodWindow1
       rect:
         serializedVersion: 2
         x: 449
@@ -1407,7 +1407,7 @@ TextureImporter:
         width: 21
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1429,7 +1429,7 @@ TextureImporter:
         width: 22
         height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1479,6 +1479,10 @@ TextureImporter:
       Crate_04: -416999915
       Crate_05: 1306220068
       Crate_06: 799499382
+      Grate1: 723667133341283396
+      Grate2: 1516150150038238101
+      Grate3: -6461534610954166730
+      Grate4: 8363171964547326554
       Light: 2542160202348583581
       PC: 3387100270311594892
       PC_1: -4293425378169360583
@@ -1499,20 +1503,16 @@ TextureImporter:
       Tileset_Objects_30: -2230436736484069679
       Tileset_Objects_31: 2272894453158698120
       Tileset_Objects_32: 7187709716326927538
-      Tileset_Objects_33: 723667133341283396
-      Tileset_Objects_34: 8363171964547326554
-      Tileset_Objects_35: -3957690915385653794
-      Tileset_Objects_36: 361290749143459018
-      Tileset_Objects_37: 1516150150038238101
-      Tileset_Objects_38: -6461534610954166730
-      Tileset_Objects_39: 5631538346429210766
-      Tileset_Objects_40: -4414893316215675478
       Tileset_Objects_41: 342489565
-      Tileset_Objects_52: -7105844
-      Tileset_Objects_53: -1322672952
-      Tileset_Objects_54: -48754736
       UP_Sign: -277486644
       Watertower: 734437939237996848
+      Window 1: 5631538346429210766
+      Window 2: -3957690915385653794
+      Window3: 361290749143459018
+      Window4: -4414893316215675478
+      Window5: -7105844
+      WoodWindow1: -48754736
+      WoodWindow2: -1322672952
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

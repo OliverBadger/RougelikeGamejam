@@ -29,10 +29,6 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 9d6449b013e9c4f4f8a3ff5e8cbe91ba, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7878350319992209165, guid: 9d6449b013e9c4f4f8a3ff5e8cbe91ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -181,7 +177,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2f362fbee3ceae4f911b33fae306ef2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  chaseDistance: 8
+  chaseTime: 0.1
 --- !u!50 &7624317537334855721
 Rigidbody2D:
   serializedVersion: 5

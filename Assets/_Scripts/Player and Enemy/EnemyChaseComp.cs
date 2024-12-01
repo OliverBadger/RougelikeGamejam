@@ -6,54 +6,56 @@ public class EnemyChaseComp : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
-    public GameObject player;
-    private float chaseDistance = 2f;
+    private GameObject player;
+    public float chaseDistance = 2f;
     private float startChaseCounter;
-    private readonly float startChaseCooldown = 2f;
+    public readonly float startChaseCooldown = 2f;
     private bool isChasing;
     private Vector3 chaseStartPos;
-    private Vector3 chaseEndPos;
+    private Vector3 chaseEndPos; 
     // Update is called once per frame
     private float chaseTimeCounter;
-    private float chaseTime = 1f;
+    public float chaseTime = 1f;
+    public float range = 2f;
+
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         startChaseCounter = startChaseCooldown;
         isChasing = false;
         chaseTimeCounter = 2f;
     }
     void Update()
     {
-
-
-        // After every 2 seconds, move towards the player by some set distance'
-        if (startChaseCounter <= 0)
+        if(Vector2.Distance(player.transform.position, transform.position) <= range)
         {
-            isChasing = true;
-            startChaseCounter = startChaseCooldown;
-            chaseStartPos = transform.position;
-            chaseEndPos = Vector3.MoveTowards(transform.position, player.transform.position, chaseDistance);
-        }
-        else
-        {
-            startChaseCounter -= Time.deltaTime;
-        }
-
-        if (isChasing)
-        {
-            if (chaseTimeCounter > 0)
+            // After every 2 seconds, move towards the player by some set distance'
+            if (startChaseCounter <= 0)
             {
-                transform.position = Vector3.Lerp(chaseStartPos, chaseEndPos, 1 - chaseTimeCounter / chaseTime);
-
-                chaseTimeCounter -= Time.deltaTime;
+                isChasing = true;
+                startChaseCounter = startChaseCooldown;
+                chaseStartPos = transform.position;
+                chaseEndPos = Vector3.MoveTowards(transform.position, player.transform.position, chaseDistance);
             }
             else
             {
-                chaseTimeCounter = startChaseCooldown;
-                isChasing = false;
+                startChaseCounter -= Time.deltaTime;
+            }
+
+            if (isChasing)
+            {
+                if (chaseTimeCounter > 0)
+                {
+                    transform.position = Vector3.Lerp(chaseStartPos, chaseEndPos, 1 - chaseTimeCounter / chaseTime);
+
+                    chaseTimeCounter -= Time.deltaTime;
+                }
+                else
+                {
+                    chaseTimeCounter = startChaseCooldown;
+                    isChasing = false;
+                }
             }
         }
     }
-
-
 }
