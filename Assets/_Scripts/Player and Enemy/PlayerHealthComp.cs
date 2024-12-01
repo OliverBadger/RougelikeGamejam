@@ -1,18 +1,23 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealthComp : MonoBehaviour
 {
-    public int maxHealth = 100;
-    private int currentHealth;
+    public float maxHealth = 100;
+    private float currentHealth;
+    public Slider healthBar;
 
     void Start()
     {
         currentHealth = maxHealth;
+        healthBar.value = currentHealth / maxHealth;
     }
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        healthBar.value = currentHealth / maxHealth;
+        Debug.Log(healthBar.value);
         if (currentHealth <= 0)
         {
             Die();
@@ -35,7 +40,7 @@ public class PlayerHealthComp : MonoBehaviour
         // Add additional logic for player death here
     }
 
-    public int GetCurrentHealth()
+    public float GetCurrentHealth()
     {
         return currentHealth;
     }
