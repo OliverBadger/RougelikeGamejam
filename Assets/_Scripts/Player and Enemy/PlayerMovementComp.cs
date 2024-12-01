@@ -83,7 +83,7 @@ public class PlayerMovementComp : MonoBehaviour
     {
         // Apply normal movement based on input
         rb.linearVelocity = moveValue * moveSpeed;
-        if (!audioSource.isPlaying) audioSource.PlayOneShot(moveSound);
+        if (rb.linearVelocity != Vector2.zero && !audioSource.isPlaying) audioSource.PlayOneShot(moveSound);
     }
     private void StartDash()
     {
