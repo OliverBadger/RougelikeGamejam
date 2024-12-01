@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 407752239387896273}
   m_Layer: 0
-  m_Name: Flying_Rock_Cone
+  m_Name: Big_Rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24,12 +24,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5095946725798232001}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4010023614289755158}
+  m_Father: {fileID: 3600992597016471425}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9173601774172096056
 GameObject:
@@ -57,11 +57,10 @@ Transform:
   m_GameObject: {fileID: 9173601774172096056}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.426, y: -0.46922, z: 0}
+  m_LocalScale: {x: 0.72305, y: 0.72305, z: 0.72305}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 407752239387896273}
+  m_Children: []
   m_Father: {fileID: 3600992597016471425}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2887794105228970060
@@ -136,7 +135,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 9af250e55d8e26d45b964da51dc5a368, type: 2}
     - target: {fileID: 7878350319992209165, guid: 00e8aaaa74c6512489d1d79b58894af7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.015
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 00e8aaaa74c6512489d1d79b58894af7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -180,6 +179,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7878350319992209165, guid: 00e8aaaa74c6512489d1d79b58894af7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4010023614289755158}
+    - targetCorrespondingSourceObject: {fileID: 7878350319992209165, guid: 00e8aaaa74c6512489d1d79b58894af7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 407752239387896273}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 00e8aaaa74c6512489d1d79b58894af7, type: 3}
       insertIndex: -1
@@ -243,6 +245,19 @@ MonoBehaviour:
     m_Flags: 0
   animator: {fileID: 0}
   rb: {fileID: 0}
+  isMoving: 0
+  dashSpeed: 15
+  dashCooldown: 1
+  dashDuration: 0.2
+  dashAction:
+    m_Name: Dash
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 8da13054-92ed-48a1-ae74-3f50549dd128
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!58 &8093090484110294909
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -277,8 +292,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.00418061, y: 0.64524925}
-  m_Radius: 0.22462787
+  m_Offset: {x: 0.00418061, y: 0.0015391707}
+  m_Radius: 0.20233482
 --- !u!114 &8026049342999247229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,6 +308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   enemy: {fileID: 0}
+  armLength: 0
 --- !u!114 &8389696269611613865
 MonoBehaviour:
   m_ObjectHideFlags: 0
